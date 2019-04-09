@@ -35,7 +35,6 @@ public class MainActivity extends WearableActivity {
         btn_nous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //nous.addPoint("nous");
                 scoreManager.addPoint("nous");
             }
         });
@@ -43,7 +42,6 @@ public class MainActivity extends WearableActivity {
         btn_eux.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //eux.addPoint("eux");
                 scoreManager.addPoint("eux");
             }
         });
