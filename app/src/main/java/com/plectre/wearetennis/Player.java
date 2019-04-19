@@ -2,10 +2,10 @@ package com.plectre.wearetennis;
 
 public class Player {
 
-    private int point;
-    private int game;
-    private int set;
-    public DisplayManager dm;
+    private int point = 0;
+    private int game = 0;
+    private int set = 0;
+
     //-------- GETTERS ------------
     public int getGame() {
         return game;
@@ -19,13 +19,15 @@ public class Player {
 
     //--------- SETTERS -----------
     public void setPoint(int pt) {
-        point = pt;
+        this.point = pt;
     }
-    /*
-    public void addPoint(String player) {
-        dm = new DisplayManager();
+    public void setGame(int game){
+        this.game = game;
+    }
+
+    public void addPoint() {
         point++;
-        dm.updatepoint(player, point);
-        //Log.i(player, String.valueOf(this.point));
-    }*/
+    }
+    public void addGame() {game++;}
+    public void addSet() {set++;}
 }
