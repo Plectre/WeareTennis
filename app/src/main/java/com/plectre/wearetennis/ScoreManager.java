@@ -1,12 +1,15 @@
 package com.plectre.wearetennis;
 
 public class ScoreManager {
+    private Player nous = new Player();
+    private Player eux = new Player();
 
-    public boolean isGame(int p1, int p2) {
+
+    public String isGame(int p1, int p2) {
 
         if (p1 == 6) {
-            return true;
+            return "nous";
         } else
-        return false;
+        return "eux";
     }
 }

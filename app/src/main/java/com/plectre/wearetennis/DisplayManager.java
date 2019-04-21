@@ -2,7 +2,7 @@ package com.plectre.wearetennis;
 
 public class DisplayManager {
 
-    private String scores[] = {"0", "15", "30", "40", "EG", "AV", "Jeu"};
+    private String scores[] = {"0", "15", "30", "40", "EG", "AV", "Jeu","OO"};
 
 
 

@@ -15,95 +15,103 @@
         android:padding="@dimen/inner_frame_layout_padding">
 
         <FrameLayout
-            android:layout_gravity="top"
             android:layout_width="match_parent"
-            android:layout_height="100dp">
-
+            android:layout_height="100dp"
+            android:layout_gravity="top">
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="bottom"
+                android:layout_marginLeft="2dp"
                 android:orientation="horizontal">
 
                 <ImageView
-                    android:padding="@dimen/padding_bulles"
-                    android:id="@+id/_nous_jeu_1"
-                    android:tag="_nous_jeu_1"
+                    android:id="@+id/_eux_jeu_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/desc_bulle_vide"
-                    android:src="@drawable/bulle_vide" />
+                    android:padding="@dimen/padding_bulles"
+                    android:src="@drawable/bulle_vide"
+                    android:tag="_nous_jeu_1" />
+
                 <ImageView
-                    android:padding="@dimen/padding_bulles"
-                    android:id="@+id/_nous_jeu_2"
+                    android:id="@+id/_eux_jeu_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/desc_bulle_vide"
+                    android:padding="@dimen/padding_bulles"
                     android:src="@drawable/bulle_vide" />
+
                 <ImageView
-                    android:padding="@dimen/padding_bulles"
-                    android:id="@+id/_nous_jeu_3"
+                    android:id="@+id/_eux_jeu_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/desc_bulle_vide"
+                    android:padding="@dimen/padding_bulles"
                     android:src="@drawable/bulle_vide" />
+
                 <ImageView
-                    android:padding="@dimen/padding_bulles"
-                    android:id="@+id/_nous_jeu_4"
+                    android:id="@+id/_eux_jeu_4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/desc_bulle_vide"
+                    android:padding="@dimen/padding_bulles"
                     android:src="@drawable/bulle_vide" />
+
                 <ImageView
-                    android:padding="@dimen/padding_bulles"
-                    android:id="@+id/_nous_jeu_5"
+                    android:id="@+id/_eux_jeu_5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/desc_bulle_vide"
+                    android:padding="@dimen/padding_bulles"
                     android:src="@drawable/bulle_vide" />
+
                 <ImageView
-                    android:padding="@dimen/padding_bulles"
-                    android:id="@+id/_nous_jeu_6"
+                    android:id="@+id/_eux_jeu_6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:contentDescription="@string/desc_bulle_vide"
+                    android:padding="@dimen/padding_bulles"
                     android:src="@drawable/bulle_vide" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
                 android:layout_gravity="bottom"
-                android:layout_marginLeft="155dp">
+                android:layout_marginLeft="155dp"
+                android:orientation="horizontal">
 
                 <ImageView
-                    android:padding="@dimen/padding_bulles"
-                    android:id="@+id/_nous_set_vide_1"
+                    android:id="@+id/_eux_set_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="right"
+                    android:layout_gravity="left"
                     android:contentDescription="@string/desc_bulle_vide"
+                    android:padding="@dimen/padding_bulles"
                     android:src="@drawable/set_vide" />
+
                 <ImageView
-                    android:padding="@dimen/padding_bulles"
-                    android:id="@+id/_nous_set_vide_2"
-                    android:layout_gravity="right"
+                    android:id="@+id/_eux_set_2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="right"
                     android:contentDescription="@string/desc_bulle_vide"
+                    android:padding="@dimen/padding_bulles"
                     android:src="@drawable/set_vide" />
+
                 <ImageView
-                    android:padding="@dimen/padding_bulles"
-                    android:id="@+id/_nous_set_vide_3"
-                    android:layout_gravity="right"
+                    android:id="@+id/_eux_set_3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_gravity="right"
                     android:contentDescription="@string/desc_bulle_vide"
+                    android:padding="@dimen/padding_bulles"
                     android:src="@drawable/set_vide" />
 
             </LinearLayout>
+
 
             <Button
                 android:id="@+id/btn_eux"
@@ -119,10 +127,104 @@
                 android:textSize="@dimen/h1" />
 
         </FrameLayout>
+
         <FrameLayout
-            android:layout_gravity="bottom"
             android:layout_width="match_parent"
-            android:layout_height="100dp">
+            android:layout_height="100dp"
+            android:layout_gravity="bottom">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginLeft="2dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/_nous_jeu_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/desc_bulle_vide"
+                    android:padding="@dimen/padding_bulles"
+                    android:src="@drawable/bulle_vide"
+                    android:tag="_nous_jeu_1" />
+
+                <ImageView
+                    android:id="@+id/_nous_jeu_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/desc_bulle_vide"
+                    android:padding="@dimen/padding_bulles"
+                    android:src="@drawable/bulle_vide" />
+
+                <ImageView
+                    android:id="@+id/_nous_jeu_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/desc_bulle_vide"
+                    android:padding="@dimen/padding_bulles"
+                    android:src="@drawable/bulle_vide" />
+
+                <ImageView
+                    android:id="@+id/_nous_jeu_4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/desc_bulle_vide"
+                    android:padding="@dimen/padding_bulles"
+                    android:src="@drawable/bulle_vide" />
+
+                <ImageView
+                    android:id="@+id/_nous_jeu_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/desc_bulle_vide"
+                    android:padding="@dimen/padding_bulles"
+                    android:src="@drawable/bulle_vide" />
+
+                <ImageView
+                    android:id="@+id/_nous_jeu_6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/desc_bulle_vide"
+                    android:padding="@dimen/padding_bulles"
+                    android:src="@drawable/bulle_vide" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:layout_marginLeft="155dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/_nous_set_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:contentDescription="@string/desc_bulle_vide"
+                    android:padding="@dimen/padding_bulles"
+                    android:src="@drawable/set_vide" />
+
+                <ImageView
+                    android:id="@+id/_nous_set_2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:contentDescription="@string/desc_bulle_vide"
+                    android:padding="@dimen/padding_bulles"
+                    android:src="@drawable/set_vide" />
+
+                <ImageView
+                    android:id="@+id/_nous_set_3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:contentDescription="@string/desc_bulle_vide"
+                    android:padding="@dimen/padding_bulles"
+                    android:src="@drawable/set_vide" />
+
+            </LinearLayout>
 
             <Button
                 android:id="@+id/btn_nous"

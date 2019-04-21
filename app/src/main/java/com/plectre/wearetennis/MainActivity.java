@@ -6,6 +6,7 @@ import android.support.wearable.activity.WearableActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 
 import java.util.ArrayList;
@@ -14,7 +15,7 @@ public class MainActivity extends WearableActivity {
 
     private Button btn_nous;
     private Button btn_eux;
-    private Drawable bulle_pleine;
+
     protected ImageView nous_jeux_1;
     protected ImageView nous_jeux_2;
     protected ImageView nous_jeux_3;
@@ -25,7 +26,7 @@ public class MainActivity extends WearableActivity {
     private ScoreManager sm;
     private Player nous;
     private Player eux;
-    private ArrayList<ImageView> allJeux;
+    private ArrayList<ImageView> nousJeux;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,10 +41,18 @@ public class MainActivity extends WearableActivity {
         nous_jeux_4 = findViewById(R.id._nous_jeu_4);
         nous_jeux_5 = findViewById(R.id._nous_jeu_5);
         nous_jeux_6 = findViewById(R.id._nous_jeu_6);
-
         // Enables Always-on
         //setAmbientEnabled();
+        nousJeux = new ArrayList<>();
+        nousJeux.add(nous_jeux_1);
+        nousJeux.add(nous_jeux_2);
+        nousJeux.add(nous_jeux_3);
+        nousJeux.add(nous_jeux_4);
+        nousJeux.add(nous_jeux_5);
+        nousJeux.add(nous_jeux_6);
 
+
+        //for (ImageView jeux: allJeux){jeux.setImageResource(R.drawable.bulle_pleine);}
         nous = new Player();
         eux = new Player();
         dm = new DisplayManager();
@@ -52,7 +61,7 @@ public class MainActivity extends WearableActivity {
         btn_nous.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Ajout du point au joueur
+                // Ajout du point au joueur 1
                 nous.addPoint();
                 majScores();
 
@@ -62,6 +71,7 @@ public class MainActivity extends WearableActivity {
        btn_eux.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                // Ajout de point au joueur 2
                 eux.addPoint();
                 majScores();
             }
@@ -74,10 +84,15 @@ public class MainActivity extends WearableActivity {
 
         int pointNous = nous.getPoint();
         int pointEux = eux.getPoint();
-        boolean isGame = sm.isGame(pointNous, pointEux);
-        if (isGame)
-        nous_jeux_1.setImageResource(R.drawable.bulle_pleine);
-        Log.i("nous jeu", String.valueOf(nous_jeux_1.getTag()));
+        int gameEux = eux.getGame();
+
+        String isGame = sm.isGame(pointNous, pointEux);// Test s'il y'à jeu
+        if (isGame == "nous") {
+            nous.addGame();
+            int gameNous = nous.getGame();
+            nousJeux.get(gameNous - 1).setImageResource(R.drawable.bulle_pleine);// Gestion des bulles
+            nous.setPoint(0);
+        }
 
         String strPtNous = dm.getScore(pointNous);
         String strPtEux = dm.getScore(pointEux);
